@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:test/feature/home/view/home_screen.dart';
+import 'package:test/feature/profile/view/profile_screen.dart';
 import 'package:test/util/navigator_util.dart';
 
 // Copyright (c) 2022 Estai Qargabai
@@ -48,7 +48,7 @@ class SplashScreen extends StatelessWidget {
   void _init(BuildContext context) async {
     Future.delayed(const Duration(milliseconds: 700), () {
       Navigator.pushAndRemoveUntil(
-          context, transitionFade(const HomeScreen()), (route) => false);
+          context, transitionFade(const ProfileScreen()), (route) => false);
     });
   }
 

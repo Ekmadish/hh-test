@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:test/feature/notification/model/notification_model.dart';
-import 'package:test/feature/widget/cupertinbtn_widget.dart';
-import 'package:test/feature/widget/loading_widget.dart';
+import 'package:test/feature/widget/widgets.dart';
 import 'package:test/util/date_time_extension.dart';
 
 class NotificationDetailScreen extends StatelessWidget {

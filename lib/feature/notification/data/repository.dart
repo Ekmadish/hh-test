@@ -16,24 +16,12 @@ class Repository {
     }
   }
 
-  Future<void> unreadNotificationCount() async {
-    try {
-      await _httpController.get('/notifications/unread-count');
-    } catch (e) {
-      rethrow;
-    }
-  }
-
   Future<void> markReadNotification(int id) async {
     try {
       await _httpController.post('/notifications/mark-read', body: {"id": id});
     } catch (e) {
       rethrow;
     }
-  }
-
-  Future<void> postNotification() async {
-    await _httpController.post('/notifications');
   }
 
   Future<void> markAllRead(List<Datum?> id) async {
@@ -48,4 +36,16 @@ class Repository {
   }
 
   void close() {}
+  //unnessary part ////////////////////////////////////////
+  Future<void> postNotification() async {
+    await _httpController.post('/notifications');
+  }
+
+  Future<void> unreadNotificationCount() async {
+    try {
+      await _httpController.get('/notifications/unread-count');
+    } catch (e) {
+      rethrow;
+    }
+  }
 }
